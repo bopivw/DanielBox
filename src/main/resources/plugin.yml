@@ -1,0 +1,6 @@
+name: DanielBox
+version: '${project.version}'
+main: vdatta.us.danielbox.DanielBox
+api-version: '1.19'
+authors: [datta]
+description: Box Core
