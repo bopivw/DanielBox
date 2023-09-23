@@ -1,0 +1,14 @@
+# Box Configuration
+
+
+scoreboard:
+  title: "&e&lDANIEL BOX CORE"
+  lines:
+    - ""
+    - "&fVersión: &7{core_version}"
+    - "&fDiscord: &cdiscord.vdatta.us"
+    - ""
+    - "&e daniel.box.core"
+
+# Messages
+messages: {}

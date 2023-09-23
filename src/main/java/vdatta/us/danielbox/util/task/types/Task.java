@@ -1,19 +1,20 @@
- package vdatta.us.danielbox.util.task;
+package vdatta.us.danielbox.util.task.types;
 
- import org.bukkit.Bukkit;
- import org.bukkit.plugin.java.JavaPlugin;
- import studio.soarinng.com.danielstaff.DanielStaff;
+import org.bukkit.Bukkit;
+import org.bukkit.plugin.java.JavaPlugin;
 
- public class Task {
+public class Task {
+    private JavaPlugin plugin;
 
+    public Task(JavaPlugin javaPlugin){
+        this.plugin = javaPlugin;
+    }
 
-     private JavaPlugin plugin = DanielStaff.getInstance();
     public Task(Runnable runnable) {
         this(runnable, 0L);
     }
 
     public Task(Runnable runnable, long delay) {
-
         if (plugin.isEnabled()) {
             int id = Bukkit.getScheduler().scheduleSyncDelayedTask(plugin, runnable, delay);
         } else {

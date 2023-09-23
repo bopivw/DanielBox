@@ -2,7 +2,6 @@ package vdatta.us.danielbox.util.configuration;
 
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.plugin.java.JavaPlugin;
-import studio.soarinng.com.danielstaff.DanielStaff;
 
 import java.io.File;
 import java.io.IOException;
@@ -12,11 +11,11 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class ConfigurationManager {
-    private JavaPlugin plugin = DanielStaff.getInstance();
-
+    private JavaPlugin plugin;
     private final Map<String, Configuration> configurationMap;
 
-    public ConfigurationManager() {
+    public ConfigurationManager(JavaPlugin plugin) {
+        this.plugin = plugin;
         this.configurationMap = new HashMap<>();
     }
 
